@@ -1,0 +1,1002 @@
+@startuml
+
+title __DTO's Class Diagram__\n
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.AdresseDto {
+          - adresse1 : String
+          - adresse2 : String
+          - codePostale : String
+          - pays : String
+          - ville : String
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getAdresse1()
+          + getAdresse2()
+          + getCodePostale()
+          + getPays()
+          + getVille()
+          + hashCode()
+          + setAdresse1()
+          + setAdresse2()
+          + setCodePostale()
+          + setPays()
+          + setVille()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ AdresseDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.AdresseDto.AdresseDtoBuilder {
+          - adresse1 : String
+          - adresse2 : String
+          - codePostale : String
+          - pays : String
+          - ville : String
+          + adresse1()
+          + adresse2()
+          + build()
+          + codePostale()
+          + pays()
+          + toString()
+          + ville()
+          ~ AdresseDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ArticleDto {
+          - codeArticle : String
+          - designation : String
+          - id : Integer
+          - idEntreprise : Integer
+          - photo : String
+          - prixUnitaireHt : BigDecimal
+          - prixUnitaireTtc : BigDecimal
+          - tauxTva : BigDecimal
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getCategory()
+          + getCodeArticle()
+          + getDesignation()
+          + getId()
+          + getIdEntreprise()
+          + getPhoto()
+          + getPrixUnitaireHt()
+          + getPrixUnitaireTtc()
+          + getTauxTva()
+          + hashCode()
+          + setCategory()
+          + setCodeArticle()
+          + setDesignation()
+          + setId()
+          + setIdEntreprise()
+          + setPhoto()
+          + setPrixUnitaireHt()
+          + setPrixUnitaireTtc()
+          + setTauxTva()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ ArticleDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ArticleDto.ArticleDtoBuilder {
+          - codeArticle : String
+          - designation : String
+          - id : Integer
+          - idEntreprise : Integer
+          - photo : String
+          - prixUnitaireHt : BigDecimal
+          - prixUnitaireTtc : BigDecimal
+          - tauxTva : BigDecimal
+          + build()
+          + category()
+          + codeArticle()
+          + designation()
+          + id()
+          + idEntreprise()
+          + photo()
+          + prixUnitaireHt()
+          + prixUnitaireTtc()
+          + tauxTva()
+          + toString()
+          ~ ArticleDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CategoryDto {
+          - articles : List<ArticleDto>
+          - code : String
+          - designation : String
+          - id : Integer
+          - idEntreprise : Integer
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getArticles()
+          + getCode()
+          + getDesignation()
+          + getId()
+          + getIdEntreprise()
+          + hashCode()
+          + setArticles()
+          + setCode()
+          + setDesignation()
+          + setId()
+          + setIdEntreprise()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ CategoryDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CategoryDto.CategoryDtoBuilder {
+          - articles : List<ArticleDto>
+          - code : String
+          - designation : String
+          - id : Integer
+          - idEntreprise : Integer
+          + articles()
+          + build()
+          + code()
+          + designation()
+          + id()
+          + idEntreprise()
+          + toString()
+          ~ CategoryDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ChangerMotDePasseUtilisateurDto {
+          - confirmMotDePasse : String
+          - id : Integer
+          - motDePasse : String
+          {static} + builder()
+          + equals()
+          + getConfirmMotDePasse()
+          + getId()
+          + getMotDePasse()
+          + hashCode()
+          + setConfirmMotDePasse()
+          + setId()
+          + setMotDePasse()
+          + toString()
+          # canEqual()
+          ~ ChangerMotDePasseUtilisateurDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ChangerMotDePasseUtilisateurDto.ChangerMotDePasseUtilisateurDtoBuilder {
+          - confirmMotDePasse : String
+          - id : Integer
+          - motDePasse : String
+          + build()
+          + confirmMotDePasse()
+          + id()
+          + motDePasse()
+          + toString()
+          ~ ChangerMotDePasseUtilisateurDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ClientDto {
+          - commandeClients : List<CommandeClientDto>
+          - id : Integer
+          - idEntreprise : Integer
+          - mail : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - prenom : String
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getAdresse()
+          + getCommandeClients()
+          + getId()
+          + getIdEntreprise()
+          + getMail()
+          + getNom()
+          + getNumTel()
+          + getPhoto()
+          + getPrenom()
+          + hashCode()
+          + setAdresse()
+          + setCommandeClients()
+          + setId()
+          + setIdEntreprise()
+          + setMail()
+          + setNom()
+          + setNumTel()
+          + setPhoto()
+          + setPrenom()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ ClientDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ClientDto.ClientDtoBuilder {
+          - commandeClients : List<CommandeClientDto>
+          - id : Integer
+          - idEntreprise : Integer
+          - mail : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - prenom : String
+          + adresse()
+          + build()
+          + commandeClients()
+          + id()
+          + idEntreprise()
+          + mail()
+          + nom()
+          + numTel()
+          + photo()
+          + prenom()
+          + toString()
+          ~ ClientDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CommandeClientDto {
+          - code : String
+          - dateCommande : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - ligneCommandeClients : List<LigneCommandeClientDto>
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getClient()
+          + getCode()
+          + getDateCommande()
+          + getEtatCommande()
+          + getId()
+          + getIdEntreprise()
+          + getLigneCommandeClients()
+          + hashCode()
+          + isCommandeLivree()
+          + setClient()
+          + setCode()
+          + setDateCommande()
+          + setEtatCommande()
+          + setId()
+          + setIdEntreprise()
+          + setLigneCommandeClients()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ CommandeClientDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CommandeClientDto.CommandeClientDtoBuilder {
+          - code : String
+          - dateCommande : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - ligneCommandeClients : List<LigneCommandeClientDto>
+          + build()
+          + client()
+          + code()
+          + dateCommande()
+          + etatCommande()
+          + id()
+          + idEntreprise()
+          + ligneCommandeClients()
+          + toString()
+          ~ CommandeClientDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CommandeFournisseurDto {
+          - code : String
+          - dateCommande : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - ligneCommandeFournisseurs : List<LigneCommandeFournisseurDto>
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getCode()
+          + getDateCommande()
+          + getEtatCommande()
+          + getFournisseur()
+          + getId()
+          + getIdEntreprise()
+          + getLigneCommandeFournisseurs()
+          + hashCode()
+          + isCommandeLivree()
+          + setCode()
+          + setDateCommande()
+          + setEtatCommande()
+          + setFournisseur()
+          + setId()
+          + setIdEntreprise()
+          + setLigneCommandeFournisseurs()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ CommandeFournisseurDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CommandeFournisseurDto.CommandeFournisseurDtoBuilder {
+          - code : String
+          - dateCommande : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - ligneCommandeFournisseurs : List<LigneCommandeFournisseurDto>
+          + build()
+          + code()
+          + dateCommande()
+          + etatCommande()
+          + fournisseur()
+          + id()
+          + idEntreprise()
+          + ligneCommandeFournisseurs()
+          + toString()
+          ~ CommandeFournisseurDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.EntrepriseDto {
+          - codeFiscal : String
+          - description : String
+          - email : String
+          - id : Integer
+          - nom : String
+          - numTel : String
+          - photo : String
+          - steWeb : String
+          - utilisateurs : List<UtilisateurDto>
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getAdresse()
+          + getCodeFiscal()
+          + getDescription()
+          + getEmail()
+          + getId()
+          + getNom()
+          + getNumTel()
+          + getPhoto()
+          + getSteWeb()
+          + getUtilisateurs()
+          + hashCode()
+          + setAdresse()
+          + setCodeFiscal()
+          + setDescription()
+          + setEmail()
+          + setId()
+          + setNom()
+          + setNumTel()
+          + setPhoto()
+          + setSteWeb()
+          + setUtilisateurs()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ EntrepriseDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.EntrepriseDto.EntrepriseDtoBuilder {
+          - codeFiscal : String
+          - description : String
+          - email : String
+          - id : Integer
+          - nom : String
+          - numTel : String
+          - photo : String
+          - steWeb : String
+          - utilisateurs : List<UtilisateurDto>
+          + adresse()
+          + build()
+          + codeFiscal()
+          + description()
+          + email()
+          + id()
+          + nom()
+          + numTel()
+          + photo()
+          + steWeb()
+          + toString()
+          + utilisateurs()
+          ~ EntrepriseDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.FournisseurDto {
+          - commandeFournisseurs : List<CommandeFournisseurDto>
+          - id : Integer
+          - idEntreprise : Integer
+          - mail : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - prenom : String
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getAdresse()
+          + getCommandeFournisseurs()
+          + getId()
+          + getIdEntreprise()
+          + getMail()
+          + getNom()
+          + getNumTel()
+          + getPhoto()
+          + getPrenom()
+          + hashCode()
+          + setAdresse()
+          + setCommandeFournisseurs()
+          + setId()
+          + setIdEntreprise()
+          + setMail()
+          + setNom()
+          + setNumTel()
+          + setPhoto()
+          + setPrenom()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ FournisseurDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.FournisseurDto.FournisseurDtoBuilder {
+          - commandeFournisseurs : List<CommandeFournisseurDto>
+          - id : Integer
+          - idEntreprise : Integer
+          - mail : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - prenom : String
+          + adresse()
+          + build()
+          + commandeFournisseurs()
+          + id()
+          + idEntreprise()
+          + mail()
+          + nom()
+          + numTel()
+          + photo()
+          + prenom()
+          + toString()
+          ~ FournisseurDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneCommandeClientDto {
+          - id : Integer
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getArticle()
+          + getCommandeClient()
+          + getId()
+          + getIdEntreprise()
+          + getPrixUnitaire()
+          + getQuantite()
+          + hashCode()
+          + setArticle()
+          + setCommandeClient()
+          + setId()
+          + setIdEntreprise()
+          + setPrixUnitaire()
+          + setQuantite()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ LigneCommandeClientDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneCommandeClientDto.LigneCommandeClientDtoBuilder {
+          - id : Integer
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          + article()
+          + build()
+          + commandeClient()
+          + id()
+          + idEntreprise()
+          + prixUnitaire()
+          + quantite()
+          + toString()
+          ~ LigneCommandeClientDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto {
+          - id : Integer
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getArticle()
+          + getCommandeFournisseur()
+          + getId()
+          + getIdEntreprise()
+          + getPrixUnitaire()
+          + getQuantite()
+          + hashCode()
+          + setArticle()
+          + setCommandeFournisseur()
+          + setId()
+          + setIdEntreprise()
+          + setPrixUnitaire()
+          + setQuantite()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ LigneCommandeFournisseurDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto.LigneCommandeFournisseurDtoBuilder {
+          - id : Integer
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          + article()
+          + build()
+          + commandeFournisseur()
+          + id()
+          + idEntreprise()
+          + prixUnitaire()
+          + quantite()
+          + toString()
+          ~ LigneCommandeFournisseurDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneVenteDto {
+          - id : Integer
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getArticle()
+          + getId()
+          + getIdEntreprise()
+          + getPrixUnitaire()
+          + getQuantite()
+          + getVente()
+          + hashCode()
+          + setArticle()
+          + setId()
+          + setIdEntreprise()
+          + setPrixUnitaire()
+          + setQuantite()
+          + setVente()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ LigneVenteDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneVenteDto.LigneVenteDtoBuilder {
+          - id : Integer
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          + article()
+          + build()
+          + id()
+          + idEntreprise()
+          + prixUnitaire()
+          + quantite()
+          + toString()
+          + vente()
+          ~ LigneVenteDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.MvtStkDto {
+          - dateMvt : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - quantite : BigDecimal
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getArticle()
+          + getDateMvt()
+          + getId()
+          + getIdEntreprise()
+          + getQuantite()
+          + getSourceMvt()
+          + getTypeMvt()
+          + hashCode()
+          + setArticle()
+          + setDateMvt()
+          + setId()
+          + setIdEntreprise()
+          + setQuantite()
+          + setSourceMvt()
+          + setTypeMvt()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ MvtStkDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.MvtStkDto.MvtStkDtoBuilder {
+          - dateMvt : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - quantite : BigDecimal
+          + article()
+          + build()
+          + dateMvt()
+          + id()
+          + idEntreprise()
+          + quantite()
+          + sourceMvt()
+          + toString()
+          + typeMvt()
+          ~ MvtStkDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.RolesDto {
+          - id : Integer
+          - roleName : String
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getId()
+          + getRoleName()
+          + getUtilisateur()
+          + hashCode()
+          + setId()
+          + setRoleName()
+          + setUtilisateur()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ RolesDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.RolesDto.RolesDtoBuilder {
+          - id : Integer
+          - roleName : String
+          + build()
+          + id()
+          + roleName()
+          + toString()
+          + utilisateur()
+          ~ RolesDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.UtilisateurDto {
+          - dateDeNaissance : Instant
+          - email : String
+          - id : Integer
+          - moteDePasse : String
+          - nom : String
+          - photo : String
+          - prenom : String
+          - roles : List<RolesDto>
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getAdresse()
+          + getDateDeNaissance()
+          + getEmail()
+          + getEntreprise()
+          + getId()
+          + getMoteDePasse()
+          + getNom()
+          + getPhoto()
+          + getPrenom()
+          + getRoles()
+          + hashCode()
+          + setAdresse()
+          + setDateDeNaissance()
+          + setEmail()
+          + setEntreprise()
+          + setId()
+          + setMoteDePasse()
+          + setNom()
+          + setPhoto()
+          + setPrenom()
+          + setRoles()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ UtilisateurDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.UtilisateurDto.UtilisateurDtoBuilder {
+          - dateDeNaissance : Instant
+          - email : String
+          - id : Integer
+          - moteDePasse : String
+          - nom : String
+          - photo : String
+          - prenom : String
+          - roles : List<RolesDto>
+          + adresse()
+          + build()
+          + dateDeNaissance()
+          + email()
+          + entreprise()
+          + id()
+          + moteDePasse()
+          + nom()
+          + photo()
+          + prenom()
+          + roles()
+          + toString()
+          ~ UtilisateurDtoBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.VentesDto {
+          - code : String
+          - commentaire : String
+          - dateVente : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - ligneVentes : List<LigneVente>
+          {static} + builder()
+          + equals()
+          {static} + fromEntity()
+          + getCode()
+          + getCommentaire()
+          + getDateVente()
+          + getId()
+          + getIdEntreprise()
+          + getLigneVentes()
+          + hashCode()
+          + setCode()
+          + setCommentaire()
+          + setDateVente()
+          + setId()
+          + setIdEntreprise()
+          + setLigneVentes()
+          {static} + toEntity()
+          + toString()
+          # canEqual()
+          ~ VentesDto()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.VentesDto.VentesDtoBuilder {
+          - code : String
+          - commentaire : String
+          - dateVente : Instant
+          - id : Integer
+          - idEntreprise : Integer
+          - ligneVentes : List<LigneVente>
+          + build()
+          + code()
+          + commentaire()
+          + dateVente()
+          + id()
+          + idEntreprise()
+          + ligneVentes()
+          + toString()
+          ~ VentesDtoBuilder()
+      }
+    }
+  }
+  
+
+  com.GestionStock.GestionStock.dto.AdresseDto +-down- com.GestionStock.GestionStock.dto.AdresseDto.AdresseDtoBuilder
+  com.GestionStock.GestionStock.dto.ArticleDto o-- com.GestionStock.GestionStock.dto.CategoryDto : category
+  com.GestionStock.GestionStock.dto.ArticleDto +-down- com.GestionStock.GestionStock.dto.ArticleDto.ArticleDtoBuilder
+  com.GestionStock.GestionStock.dto.ArticleDto.ArticleDtoBuilder o-- com.GestionStock.GestionStock.dto.CategoryDto : category
+  com.GestionStock.GestionStock.dto.CategoryDto +-down- com.GestionStock.GestionStock.dto.CategoryDto.CategoryDtoBuilder
+  com.GestionStock.GestionStock.dto.ChangerMotDePasseUtilisateurDto +-down- com.GestionStock.GestionStock.dto.ChangerMotDePasseUtilisateurDto.ChangerMotDePasseUtilisateurDtoBuilder
+  com.GestionStock.GestionStock.dto.ClientDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.ClientDto +-down- com.GestionStock.GestionStock.dto.ClientDto.ClientDtoBuilder
+  com.GestionStock.GestionStock.dto.ClientDto.ClientDtoBuilder o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.CommandeClientDto o-- com.GestionStock.GestionStock.dto.ClientDto : client
+  com.GestionStock.GestionStock.dto.CommandeClientDto o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.dto.CommandeClientDto +-down- com.GestionStock.GestionStock.dto.CommandeClientDto.CommandeClientDtoBuilder
+  com.GestionStock.GestionStock.dto.CommandeClientDto.CommandeClientDtoBuilder o-- com.GestionStock.GestionStock.dto.ClientDto : client
+  com.GestionStock.GestionStock.dto.CommandeClientDto.CommandeClientDtoBuilder o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto o-- com.GestionStock.GestionStock.dto.FournisseurDto : fournisseur
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto +-down- com.GestionStock.GestionStock.dto.CommandeFournisseurDto.CommandeFournisseurDtoBuilder
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto.CommandeFournisseurDtoBuilder o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto.CommandeFournisseurDtoBuilder o-- com.GestionStock.GestionStock.dto.FournisseurDto : fournisseur
+  com.GestionStock.GestionStock.dto.EntrepriseDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.EntrepriseDto +-down- com.GestionStock.GestionStock.dto.EntrepriseDto.EntrepriseDtoBuilder
+  com.GestionStock.GestionStock.dto.EntrepriseDto.EntrepriseDtoBuilder o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.FournisseurDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.FournisseurDto +-down- com.GestionStock.GestionStock.dto.FournisseurDto.FournisseurDtoBuilder
+  com.GestionStock.GestionStock.dto.FournisseurDto.FournisseurDtoBuilder o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto o-- com.GestionStock.GestionStock.dto.CommandeClientDto : commandeClient
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto +-down- com.GestionStock.GestionStock.dto.LigneCommandeClientDto.LigneCommandeClientDtoBuilder
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto.LigneCommandeClientDtoBuilder o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto.LigneCommandeClientDtoBuilder o-- com.GestionStock.GestionStock.dto.CommandeClientDto : commandeClient
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto o-- com.GestionStock.GestionStock.model.CommandeFournisseur : commandeFournisseur
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto +-down- com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto.LigneCommandeFournisseurDtoBuilder
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto.LigneCommandeFournisseurDtoBuilder o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto.LigneCommandeFournisseurDtoBuilder o-- com.GestionStock.GestionStock.model.CommandeFournisseur : commandeFournisseur
+  com.GestionStock.GestionStock.dto.LigneVenteDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneVenteDto o-- com.GestionStock.GestionStock.dto.VentesDto : vente
+  com.GestionStock.GestionStock.dto.LigneVenteDto +-down- com.GestionStock.GestionStock.dto.LigneVenteDto.LigneVenteDtoBuilder
+  com.GestionStock.GestionStock.dto.LigneVenteDto.LigneVenteDtoBuilder o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneVenteDto.LigneVenteDtoBuilder o-- com.GestionStock.GestionStock.dto.VentesDto : vente
+  com.GestionStock.GestionStock.dto.MvtStkDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.MvtStkDto o-- com.GestionStock.GestionStock.model.SourceMvtStk : sourceMvt
+  com.GestionStock.GestionStock.dto.MvtStkDto o-- com.GestionStock.GestionStock.model.TypeMvtStk : typeMvt
+  com.GestionStock.GestionStock.dto.MvtStkDto +-down- com.GestionStock.GestionStock.dto.MvtStkDto.MvtStkDtoBuilder
+  com.GestionStock.GestionStock.dto.MvtStkDto.MvtStkDtoBuilder o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.MvtStkDto.MvtStkDtoBuilder o-- com.GestionStock.GestionStock.model.SourceMvtStk : sourceMvt
+  com.GestionStock.GestionStock.dto.MvtStkDto.MvtStkDtoBuilder o-- com.GestionStock.GestionStock.model.TypeMvtStk : typeMvt
+  com.GestionStock.GestionStock.dto.RolesDto o-- com.GestionStock.GestionStock.dto.UtilisateurDto : utilisateur
+  com.GestionStock.GestionStock.dto.RolesDto +-down- com.GestionStock.GestionStock.dto.RolesDto.RolesDtoBuilder
+  com.GestionStock.GestionStock.dto.RolesDto.RolesDtoBuilder o-- com.GestionStock.GestionStock.dto.UtilisateurDto : utilisateur
+  com.GestionStock.GestionStock.dto.UtilisateurDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.UtilisateurDto o-- com.GestionStock.GestionStock.dto.EntrepriseDto : entreprise
+  com.GestionStock.GestionStock.dto.UtilisateurDto +-down- com.GestionStock.GestionStock.dto.UtilisateurDto.UtilisateurDtoBuilder
+  com.GestionStock.GestionStock.dto.UtilisateurDto.UtilisateurDtoBuilder o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.UtilisateurDto.UtilisateurDtoBuilder o-- com.GestionStock.GestionStock.dto.EntrepriseDto : entreprise
+  com.GestionStock.GestionStock.dto.VentesDto +-down- com.GestionStock.GestionStock.dto.VentesDto.VentesDtoBuilder
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

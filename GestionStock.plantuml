@@ -1,0 +1,420 @@
+@startuml
+
+title __GESTIONSTOCK's Class Diagram__\n
+
+  namespace com.GestionStock.GestionStock {
+    class com.GestionStock.GestionStock.GestionStockApplication {
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.AdresseValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.ArticleValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.CategoryValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.ClientValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.CommandeClientValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.CommandeFournisseurValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.EntrepriseValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace Validator {
+      class com.GestionStock.GestionStock.Validator.UtilisateurValidator {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.AdresseDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ArticleDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CategoryDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ChangerMotDePasseUtilisateurDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.ClientDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CommandeClientDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.CommandeFournisseurDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.EntrepriseDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.FournisseurDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneCommandeClientDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.LigneVenteDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.MvtStkDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.RolesDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.UtilisateurDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace dto {
+      class com.GestionStock.GestionStock.dto.VentesDto {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.AbstractEntity {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Adresse {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Article {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Category {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Client {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.CommandeClient {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.CommandeFournisseur {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Entreprise {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      enum EtatCommande {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Fournisseur {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.LigneCommandeClient {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.LigneCommandeFournisseur {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.LigneVente {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.MvtStk {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Roles {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      enum SourceMvtStk {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      enum TypeMvtStk {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Utilisateur {
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Ventes {
+      }
+    }
+  }
+  
+
+  com.GestionStock.GestionStock.dto.ArticleDto o-- com.GestionStock.GestionStock.dto.CategoryDto : category
+  com.GestionStock.GestionStock.dto.ClientDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.CommandeClientDto o-- com.GestionStock.GestionStock.dto.ClientDto : client
+  com.GestionStock.GestionStock.dto.CommandeClientDto o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.dto.CommandeFournisseurDto o-- com.GestionStock.GestionStock.dto.FournisseurDto : fournisseur
+  com.GestionStock.GestionStock.dto.EntrepriseDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.FournisseurDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneCommandeClientDto o-- com.GestionStock.GestionStock.dto.CommandeClientDto : commandeClient
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneCommandeFournisseurDto o-- com.GestionStock.GestionStock.model.CommandeFournisseur : commandeFournisseur
+  com.GestionStock.GestionStock.dto.LigneVenteDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.LigneVenteDto o-- com.GestionStock.GestionStock.dto.VentesDto : vente
+  com.GestionStock.GestionStock.dto.MvtStkDto o-- com.GestionStock.GestionStock.dto.ArticleDto : article
+  com.GestionStock.GestionStock.dto.MvtStkDto o-- com.GestionStock.GestionStock.model.SourceMvtStk : sourceMvt
+  com.GestionStock.GestionStock.dto.MvtStkDto o-- com.GestionStock.GestionStock.model.TypeMvtStk : typeMvt
+  com.GestionStock.GestionStock.dto.RolesDto o-- com.GestionStock.GestionStock.dto.UtilisateurDto : utilisateur
+  com.GestionStock.GestionStock.dto.UtilisateurDto o-- com.GestionStock.GestionStock.dto.AdresseDto : adresse
+  com.GestionStock.GestionStock.dto.UtilisateurDto o-- com.GestionStock.GestionStock.dto.EntrepriseDto : entreprise
+  com.GestionStock.GestionStock.model.AbstractEntity .up.|> java.io.Serializable
+  com.GestionStock.GestionStock.model.Adresse .up.|> java.io.Serializable
+  com.GestionStock.GestionStock.model.Article -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Article o-- com.GestionStock.GestionStock.model.Category : category
+  com.GestionStock.GestionStock.model.Category -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Client -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Client o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.CommandeClient -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.CommandeClient o-- com.GestionStock.GestionStock.model.Client : client
+  com.GestionStock.GestionStock.model.CommandeClient o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.model.CommandeFournisseur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.CommandeFournisseur o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.model.CommandeFournisseur o-- com.GestionStock.GestionStock.model.Fournisseur : fournisseur
+  com.GestionStock.GestionStock.model.Entreprise -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Entreprise o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.Fournisseur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Fournisseur o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.LigneCommandeClient -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.LigneCommandeClient o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.LigneCommandeClient o-- com.GestionStock.GestionStock.model.CommandeClient : commandeClient
+  com.GestionStock.GestionStock.model.LigneCommandeFournisseur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.LigneCommandeFournisseur o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.LigneCommandeFournisseur o-- com.GestionStock.GestionStock.model.CommandeFournisseur : commandeFournisseur
+  com.GestionStock.GestionStock.model.LigneVente -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.LigneVente o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.LigneVente o-- com.GestionStock.GestionStock.model.Ventes : vente
+  com.GestionStock.GestionStock.model.MvtStk -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.MvtStk o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.MvtStk o-- com.GestionStock.GestionStock.model.SourceMvtStk : sourceMvt
+  com.GestionStock.GestionStock.model.MvtStk o-- com.GestionStock.GestionStock.model.TypeMvtStk : typeMvt
+  com.GestionStock.GestionStock.model.Roles -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Roles o-- com.GestionStock.GestionStock.model.Utilisateur : utilisateur
+  com.GestionStock.GestionStock.model.Utilisateur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Utilisateur o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.Utilisateur o-- com.GestionStock.GestionStock.model.Entreprise : entreprise
+  com.GestionStock.GestionStock.model.Ventes -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

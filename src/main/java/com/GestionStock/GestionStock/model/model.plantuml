@@ -1,0 +1,617 @@
+@startuml
+
+title __MODEL's Class Diagram__\n
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.AbstractEntity {
+          - creationDate : Instant
+          - id : Integer
+          - lastModifiedDate : Instant
+          + AbstractEntity()
+          + equals()
+          + getCreationDate()
+          + getId()
+          + getLastModifiedDate()
+          + hashCode()
+          + setCreationDate()
+          + setId()
+          + setLastModifiedDate()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Adresse {
+          - adresse1 : String
+          - adresse2 : String
+          - codePostale : String
+          - pays : String
+          - ville : String
+          + Adresse()
+          + Adresse()
+          + equals()
+          + getAdresse1()
+          + getAdresse2()
+          + getCodePostale()
+          + getPays()
+          + getVille()
+          + hashCode()
+          + setAdresse1()
+          + setAdresse2()
+          + setCodePostale()
+          + setPays()
+          + setVille()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Article {
+          - codeArticle : String
+          - designation : String
+          - idEntreprise : Integer
+          - ligneCommandeClients : List<LigneCommandeClient>
+          - ligneCommandeFournisseurs : List<LigneCommandeFournisseur>
+          - ligneVentes : List<LigneVente>
+          - mvtStks : List<MvtStk>
+          - photo : String
+          - prixUnitaireHt : BigDecimal
+          - prixUnitaireTtc : BigDecimal
+          - tauxTva : BigDecimal
+          + Article()
+          + Article()
+          {static} + builder()
+          + equals()
+          + getCategory()
+          + getCodeArticle()
+          + getDesignation()
+          + getIdEntreprise()
+          + getLigneCommandeClients()
+          + getLigneCommandeFournisseurs()
+          + getLigneVentes()
+          + getMvtStks()
+          + getPhoto()
+          + getPrixUnitaireHt()
+          + getPrixUnitaireTtc()
+          + getTauxTva()
+          + hashCode()
+          + setCategory()
+          + setCodeArticle()
+          + setDesignation()
+          + setIdEntreprise()
+          + setLigneCommandeClients()
+          + setLigneCommandeFournisseurs()
+          + setLigneVentes()
+          + setMvtStks()
+          + setPhoto()
+          + setPrixUnitaireHt()
+          + setPrixUnitaireTtc()
+          + setTauxTva()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock{
+    namespace model {
+      class com.GestionStock.GestionStock.model.Article{
+          - codeArticle : String
+          - designation : String
+          - idEntreprise : Integer
+          - ligneCommandeClients : List<LigneCommandeClient>
+          - ligneCommandeFournisseurs : List<LigneCommandeFournisseur>
+          - ligneVentes : List<LigneVente>
+          - mvtStks : List<MvtStk>
+          - photo : String
+          - prixUnitaireHt : BigDecimal
+          - prixUnitaireTtc : BigDecimal
+          - tauxTva : BigDecimal
+          + build()
+          + category()
+          + codeArticle()
+          + designation()
+          + idEntreprise()
+          + ligneCommandeClients()
+          + ligneCommandeFournisseurs()
+          + ligneVentes()
+          + mvtStks()
+          + photo()
+          + prixUnitaireHt()
+          + prixUnitaireTtc()
+          + tauxTva()
+          + toString()
+          ~ ArticleBuilder()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Category {
+          - articles : List<Article>
+          - code : String
+          - designation : String
+          - idEntreprise : Integer
+          + Category()
+          + equals()
+          + getArticles()
+          + getCode()
+          + getDesignation()
+          + getIdEntreprise()
+          + hashCode()
+          + setArticles()
+          + setCode()
+          + setDesignation()
+          + setIdEntreprise()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Client {
+          - commandeClients : List<CommandeClient>
+          - idEntreprise : Integer
+          - mail : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - prenom : String
+          + Client()
+          + Client()
+          + equals()
+          + getAdresse()
+          + getCommandeClients()
+          + getIdEntreprise()
+          + getMail()
+          + getNom()
+          + getNumTel()
+          + getPhoto()
+          + getPrenom()
+          + hashCode()
+          + setAdresse()
+          + setCommandeClients()
+          + setIdEntreprise()
+          + setMail()
+          + setNom()
+          + setNumTel()
+          + setPhoto()
+          + setPrenom()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.CommandeClient {
+          - code : String
+          - dateCommande : Instant
+          - idEntreprise : Integer
+          - ligneCommandeClients : List<LigneCommandeClient>
+          + CommandeClient()
+          + CommandeClient()
+          + equals()
+          + getClient()
+          + getCode()
+          + getDateCommande()
+          + getEtatCommande()
+          + getIdEntreprise()
+          + getLigneCommandeClients()
+          + hashCode()
+          + setClient()
+          + setCode()
+          + setDateCommande()
+          + setEtatCommande()
+          + setIdEntreprise()
+          + setLigneCommandeClients()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.CommandeFournisseur {
+          - code : String
+          - dateCommande : Instant
+          - idEntreprise : Integer
+          - ligneCommandeFournisseurs : List<LigneCommandeFournisseur>
+          + CommandeFournisseur()
+          + CommandeFournisseur()
+          + equals()
+          + getCode()
+          + getDateCommande()
+          + getEtatCommande()
+          + getFournisseur()
+          + getIdEntreprise()
+          + getLigneCommandeFournisseurs()
+          + hashCode()
+          + setCode()
+          + setDateCommande()
+          + setEtatCommande()
+          + setFournisseur()
+          + setIdEntreprise()
+          + setLigneCommandeFournisseurs()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Entreprise {
+          - codeFiscal : String
+          - description : String
+          - email : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - steWeb : String
+          - utilisateurs : List<Utilisateur>
+          + Entreprise()
+          + Entreprise()
+          + equals()
+          + getAdresse()
+          + getCodeFiscal()
+          + getDescription()
+          + getEmail()
+          + getNom()
+          + getNumTel()
+          + getPhoto()
+          + getSteWeb()
+          + getUtilisateurs()
+          + hashCode()
+          + setAdresse()
+          + setCodeFiscal()
+          + setDescription()
+          + setEmail()
+          + setNom()
+          + setNumTel()
+          + setPhoto()
+          + setSteWeb()
+          + setUtilisateurs()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      enum EtatCommande {
+        EN_PREPARATION
+        LIVREE
+        VALIDEE
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Fournisseur {
+          - commandeFournisseurs : List<CommandeFournisseur>
+          - idEntreprise : Integer
+          - mail : String
+          - nom : String
+          - numTel : String
+          - photo : String
+          - prenom : String
+          + Fournisseur()
+          + Fournisseur()
+          + equals()
+          + getAdresse()
+          + getCommandeFournisseurs()
+          + getIdEntreprise()
+          + getMail()
+          + getNom()
+          + getNumTel()
+          + getPhoto()
+          + getPrenom()
+          + hashCode()
+          + setAdresse()
+          + setCommandeFournisseurs()
+          + setIdEntreprise()
+          + setMail()
+          + setNom()
+          + setNumTel()
+          + setPhoto()
+          + setPrenom()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.LigneCommandeClient {
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          + LigneCommandeClient()
+          + LigneCommandeClient()
+          + equals()
+          + getArticle()
+          + getCommandeClient()
+          + getIdEntreprise()
+          + getPrixUnitaire()
+          + getQuantite()
+          + hashCode()
+          + setArticle()
+          + setCommandeClient()
+          + setIdEntreprise()
+          + setPrixUnitaire()
+          + setQuantite()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.LigneCommandeFournisseur {
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          + LigneCommandeFournisseur()
+          + LigneCommandeFournisseur()
+          + equals()
+          + getArticle()
+          + getCommandeFournisseur()
+          + getIdEntreprise()
+          + getPrixUnitaire()
+          + getQuantite()
+          + hashCode()
+          + setArticle()
+          + setCommandeFournisseur()
+          + setIdEntreprise()
+          + setPrixUnitaire()
+          + setQuantite()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.LigneVente {
+          - idEntreprise : Integer
+          - prixUnitaire : BigDecimal
+          - quantite : BigDecimal
+          + LigneVente()
+          + LigneVente()
+          + equals()
+          + getArticle()
+          + getIdEntreprise()
+          + getPrixUnitaire()
+          + getQuantite()
+          + getVente()
+          + hashCode()
+          + setArticle()
+          + setIdEntreprise()
+          + setPrixUnitaire()
+          + setQuantite()
+          + setVente()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.MvtStk {
+          - dateMvt : Instant
+          - idEntreprise : Integer
+          - quantite : BigDecimal
+          + MvtStk()
+          + MvtStk()
+          + equals()
+          + getArticle()
+          + getDateMvt()
+          + getIdEntreprise()
+          + getQuantite()
+          + getSourceMvt()
+          + getTypeMvt()
+          + hashCode()
+          + setArticle()
+          + setDateMvt()
+          + setIdEntreprise()
+          + setQuantite()
+          + setSourceMvt()
+          + setTypeMvt()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Roles {
+          - roleName : String
+          + Roles()
+          + Roles()
+          + equals()
+          + getRoleName()
+          + getUtilisateur()
+          + hashCode()
+          + setRoleName()
+          + setUtilisateur()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      enum SourceMvtStk {
+        COMMANDE_CLIENT
+        COMMANDE_FOURNISSEUR
+        VENTE
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      enum TypeMvtStk {
+        CORRECTION_NEG
+        CORRECTION_POS
+        ENTREE
+        SORTIE
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Utilisateur {
+          - dateDeNaissance : Instant
+          - email : String
+          - moteDePasse : String
+          - nom : String
+          - photo : String
+          - prenom : String
+          - roles : List<Roles>
+          + Utilisateur()
+          + Utilisateur()
+          + equals()
+          + getAdresse()
+          + getDateDeNaissance()
+          + getEmail()
+          + getEntreprise()
+          + getMoteDePasse()
+          + getNom()
+          + getPhoto()
+          + getPrenom()
+          + getRoles()
+          + hashCode()
+          + setAdresse()
+          + setDateDeNaissance()
+          + setEmail()
+          + setEntreprise()
+          + setMoteDePasse()
+          + setNom()
+          + setPhoto()
+          + setPrenom()
+          + setRoles()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  namespace com.GestionStock.GestionStock {
+    namespace model {
+      class com.GestionStock.GestionStock.model.Ventes {
+          - code : String
+          - commentaire : String
+          - dateVente : Instant
+          - idEntreprise : Integer
+          - ligneVentes : List<LigneVente>
+          + Ventes()
+          + Ventes()
+          + equals()
+          + getCode()
+          + getCommentaire()
+          + getDateVente()
+          + getIdEntreprise()
+          + getLigneVentes()
+          + hashCode()
+          + setCode()
+          + setCommentaire()
+          + setDateVente()
+          + setIdEntreprise()
+          + setLigneVentes()
+          + toString()
+          # canEqual()
+      }
+    }
+  }
+  
+
+  com.GestionStock.GestionStock.model.AbstractEntity .up.|> java.io.Serializable
+  com.GestionStock.GestionStock.model.Adresse .up.|> java.io.Serializable
+  com.GestionStock.GestionStock.model.Article -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Article o-- com.GestionStock.GestionStock.model.Category : category
+  com.GestionStock.GestionStock.model.Article +-down- com.GestionStock.GestionStock.model.Article.ArticleBuilder
+  com.GestionStock.GestionStock.model.Article.ArticleBuilder o-- com.GestionStock.GestionStock.model.Category : category
+  com.GestionStock.GestionStock.model.Category -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Client -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Client o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.CommandeClient -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.CommandeClient o-- com.GestionStock.GestionStock.model.Client : client
+  com.GestionStock.GestionStock.model.CommandeClient o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.model.CommandeFournisseur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.CommandeFournisseur o-- com.GestionStock.GestionStock.model.EtatCommande : etatCommande
+  com.GestionStock.GestionStock.model.CommandeFournisseur o-- com.GestionStock.GestionStock.model.Fournisseur : fournisseur
+  com.GestionStock.GestionStock.model.Entreprise -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Entreprise o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.Fournisseur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Fournisseur o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.LigneCommandeClient -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.LigneCommandeClient o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.LigneCommandeClient o-- com.GestionStock.GestionStock.model.CommandeClient : commandeClient
+  com.GestionStock.GestionStock.model.LigneCommandeFournisseur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.LigneCommandeFournisseur o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.LigneCommandeFournisseur o-- com.GestionStock.GestionStock.model.CommandeFournisseur : commandeFournisseur
+  com.GestionStock.GestionStock.model.LigneVente -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.LigneVente o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.LigneVente o-- com.GestionStock.GestionStock.model.Ventes : vente
+  com.GestionStock.GestionStock.model.MvtStk -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.MvtStk o-- com.GestionStock.GestionStock.model.Article : article
+  com.GestionStock.GestionStock.model.MvtStk o-- com.GestionStock.GestionStock.model.SourceMvtStk : sourceMvt
+  com.GestionStock.GestionStock.model.MvtStk o-- com.GestionStock.GestionStock.model.TypeMvtStk : typeMvt
+  com.GestionStock.GestionStock.model.Roles -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Roles o-- com.GestionStock.GestionStock.model.Utilisateur : utilisateur
+  com.GestionStock.GestionStock.model.Utilisateur -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+  com.GestionStock.GestionStock.model.Utilisateur o-- com.GestionStock.GestionStock.model.Adresse : adresse
+  com.GestionStock.GestionStock.model.Utilisateur o-- com.GestionStock.GestionStock.model.Entreprise : entreprise
+  com.GestionStock.GestionStock.model.Ventes -up-|> com.GestionStock.GestionStock.model.AbstractEntity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
