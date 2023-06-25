@@ -18,7 +18,6 @@ public class ClientDto  {
     private String prenom;
 
     private AddressDto adresse;
-
     private String photo;
 
     private String mail;
